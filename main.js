@@ -22,7 +22,7 @@ function getValue(e) {
     axios.post('https://crudcrud.com/api/b46cdf29eb8a4e60949027aa0ce78ea3/candy', candyDetails)
     .then(res => console.log(res))
     .catch(err => console.log(err))
-    candyQuantities[candyDetails.candyname] = candyDetails.quantity;
+    candyQuantities[candyDetails._id] = candyDetails.quantity;
 
     displaySavedData(candyDetails);
 }
